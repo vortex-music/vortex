@@ -1,23 +1,58 @@
 /* Root CSS For Main App Layout */
 
+:root {
+    /* Root-level custom properties for consistency */
+    --bg-primary: #0a0a0a;
+    /* Almost black */
+    --accent-color: rgb(3, 26, 107);
+    /*3, 26, 107*/
+    /* Yellow with transparency */
+
+    /* Root Fonts (Inter)  */
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    /* fix for Chrome */
+
+    /* Misc */
+    user-select: none;
+}
+
 body {
     margin: 0px;
     width: 100vw;
     height: 100vh;
 }
 
-:root {
-    /* Root Fonts (Inter)  */
-    font-family: Inter, sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-
-    /* Misc */
-    user-select: none;
-}
-
 /* Inter Variable Font */
 @supports (font-variation-settings: normal) {
     :root {
         font-family: InterVariable, sans-serif;
+    }
+}
+
+@keyframes animate-background {
+    0% {
+        background-position: 50% 50%, 40% 30%, 70% 80%;
+        /* Initial positions */
+    }
+
+    25% {
+        background-position: 80% 20%, 10% 60%, 90% 90%;
+        /* Move spots far across the screen */
+    }
+
+    50% {
+        background-position: 20% 70%, 70% 10%, 30% 50%;
+        /* Another extreme position */
+    }
+
+    75% {
+        background-position: 60% 30%, 20% 80%, 40% 20%;
+        /* Gradual return to the middle */
+    }
+
+    100% {
+        background-position: 50% 50%, 40% 30%, 70% 80%;
+        /* Return to initial positions */
     }
 }
