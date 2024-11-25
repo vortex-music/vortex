@@ -1,0 +1,23 @@
+/* Root CSS For Main App Layout */
+
+body {
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+}
+
+:root {
+    /* Root Fonts (Inter)  */
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+
+    /* Misc */
+    user-select: none;
+}
+
+/* Inter Variable Font */
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: InterVariable, sans-serif;
+    }
+}

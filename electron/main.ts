@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron'
+import { app, BrowserWindow, ipcMain } from 'electron'
 import { createRequire } from 'node:module'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
@@ -26,9 +26,17 @@ process.env.VITE_PUBLIC = VITE_DEV_SERVER_URL ? path.join(process.env.APP_ROOT, 
 
 let win: BrowserWindow | null
 
+/* VortexAPI Window Control Events */
+ipcMain.handle('close-window', () => { win?.close() })
+ipcMain.handle('minimize-window', () => { win?.minimize() })
+ipcMain.handle('restore-window', () => { win?.isMaximized() ? win.restore() : win?.maximize() });
+
 function createWindow() {
   win = new BrowserWindow({
+    /* App Icon, Title Bar */
+    titleBarStyle: 'hidden',
     icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
+
     webPreferences: {
       preload: path.join(__dirname, 'preload.mjs'),
     },
