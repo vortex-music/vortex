@@ -1,4 +1,7 @@
 /* Root CSS For Main App Layout */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
     /* Root-level custom properties for consistency */
