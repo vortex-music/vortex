@@ -32,14 +32,5 @@ export default () => {
             <GlobalPlayerControls />
             <WindowControls />
         </div>
-        // <Box sx={{
-        //     '&': { "app-region": "drag" }, /* Add Electron Custom Title Bar Drag */
-        //     padding: '4px',
-        //     height: '46px',
-        //     display: 'flex',
-        // }}>
-        //     <GlobalPlayerControls sx={{ flexGrow: 1 }} />
-        //     <WindowControls />
-        // </Box>
     )
 }
