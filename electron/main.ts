@@ -36,7 +36,10 @@ function createWindow() {
     /* App Icon, Title Bar */
     titleBarStyle: 'hidden',
     icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
+    
+    /* Traffic Lights Position (macOS) */
     ...(process.platform !== "darwin" ? {} : {trafficLightPosition: { x: 18, y: 18 }}),
+    
     /* Default Width and Height */
     width: 1100,
     height: 700,

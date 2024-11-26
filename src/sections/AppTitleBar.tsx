@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import GlobalPlayerControls from './GlobalPlayerControls';
 
 /* Window Controls for Windows / Linux */
@@ -24,7 +25,10 @@ const WindowControls = () => {
 
 export default () => {
     return (
-        <div className='h-14 pl-4 ml-20 pr-4 flex'>
+        <div className={clsx(
+            'h-14 pl-4 pr-4 flex',
+            { 'ml-20': window.vortexAPI.platform === 'darwin' }
+        )}>
             <GlobalPlayerControls />
             <WindowControls />
         </div>
