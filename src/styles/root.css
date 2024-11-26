@@ -39,3 +39,28 @@ body {
         font-family: InterVariable, sans-serif;
     }
 }
+
+.theme_light {
+    --app_background: #ffffff;
+    --secondary_background: #ffffff;
+    --primaryButton_background: #ffffff;
+    --primaryHover_background: #edf2f7;
+    --primaryActive_background: #e2e8f0;
+    --primary_font: black;
+
+    --primary_border: #edf2f7;
+
+}
+
+.theme_dark {
+    --app_background: #081731;
+    --secondary_background: #0F2447;
+    --primaryButton_background: #4C6EF5;
+    --primaryHover_background: #3B5BDB;
+    --primaryActive_background: #2D4380;
+
+    --primary_font: #F8F9FA;
+
+    --primary_border: #23498A;
+}
+
