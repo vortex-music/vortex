@@ -8,6 +8,22 @@ export default {
   ],
   darkMode: 'class', // or 'class'
   theme: {
+    extend: {
+      colors: {
+        app_background: "var(--app_background)",
+        secondary_background: "var(--secondary_background)",
+        primaryButton_background: "var(--primaryButton_background)",
+        primaryHover_background: 'var(--primaryHover_background)',
+        primaryActive_background: 'var(--primaryActive_background)',
+        
+        primary_font: 'var(--primary_font)',
+        
+        primary_border: 'var(--primary_border)',
+
+        subSectionDarkBlue: '#0E2854',
+        scrollbarBlue: '#829DCC',
+      },
+    },
     accentColor: ({ theme }) => ({
       ...theme('colors'),
       auto: 'auto',

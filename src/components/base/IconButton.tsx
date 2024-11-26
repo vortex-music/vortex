@@ -10,7 +10,7 @@ export default (props: IconButtonProps) => {
     return (
         <ButtonBase
             variant={variant ?? "text"}
-            className={clsx("p-1 h-fit w-fit", className)}
+            className={clsx("p-1 h-fit w-fit bg-primaryButton_background", className)}
             {...otherProps}
         >
             {children}
