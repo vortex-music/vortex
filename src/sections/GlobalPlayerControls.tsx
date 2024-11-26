@@ -40,7 +40,7 @@ export default () => {
 
             {/* Right Side Controls */}
             <div className="flex items-center gap-x-1">
-                <SpeakerWaveIcon className="size-5 text-primaryButton_background" />
+                <SpeakerWaveIcon className="size-5" />
                 <Slider />
                 <IconButton className="ml-4"><ArrowUpOnSquareIcon className="size-5" /></IconButton>
                 <IconButton><ChatBubbleBottomCenterTextIcon className="size-5" /></IconButton>

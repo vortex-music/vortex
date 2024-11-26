@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 
 /* Import Root Fonts and Styles */
+import './styles/themes.css'
 import './styles/root.css'
 import './fonts/inter.css'
 

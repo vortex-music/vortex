@@ -13,17 +13,17 @@ export default (props: ButtonBaseProps) => {
         <button
             {...otherProps}
             className={clsx(
-                "bg-primaryButton_background",
-                "hover:bg-primaryHover_background",
-                "active:bg-primaryActive_background",
-                "text-gray-800",
+                "bg-bg-default",
+                "hover:bg-action-hover",
+                "active:bg-action-active",
+                "text-text-primary",
                 "font-semibold",
                 "rounded",
                 className,
 
                 /* Variants! */
                 {
-                    "border border-gray-300 shadow": !props.variant || props.variant === "outlined",
+                    "border border-border-default shadow": !props.variant || props.variant === "outlined",
                     "": props.variant === "text" /* No Borders */
                 }
             )}

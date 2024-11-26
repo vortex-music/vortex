@@ -9,20 +9,37 @@ export default {
   darkMode: 'class', // or 'class'
   theme: {
     extend: {
-      colors: {
-        app_background: "var(--app_background)",
-        secondary_background: "var(--secondary_background)",
-        primaryButton_background: "var(--primaryButton_background)",
-        primaryHover_background: 'var(--primaryHover_background)',
-        primaryActive_background: 'var(--primaryActive_background)',
-        
-        primary_font: 'var(--primary_font)',
-        
-        primary_border: 'var(--primary_border)',
+      colors: () => {
+        /* Define Theme Colors to Map */
+        let colors = [
+          /* Primary Colors */
+          "primary-light",
+          "primary-main",
+          "primary-dark",
 
-        subSectionDarkBlue: '#0E2854',
-        scrollbarBlue: '#829DCC',
-      },
+          /* Text Colors */
+          "text-primary",
+          "text-secondary",
+          "text-disabled",
+
+          /* Action Colors */
+          "action-active",
+          "action-hover",
+          "action-selected",
+          "action-disabled",
+
+          /* Background Colors */
+          "bg-default",
+          "bg-secondary",
+          "bg-paper"
+        ]
+
+        /* Map to CSS Variables */
+        return colors.reduce((acc, v) => {
+          acc[v] = `var(--${v})`;
+          return acc;
+        }, {})
+      }
     },
     accentColor: ({ theme }) => ({
       ...theme('colors'),
