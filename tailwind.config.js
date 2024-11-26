@@ -9,6 +9,9 @@ export default {
   darkMode: 'class', // or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter'],
+      },
       colors: () => {
         /* Define Theme Colors to Map */
         let colors = [

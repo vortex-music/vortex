@@ -8,7 +8,7 @@ export default (props: DrawerProps) => {
     return (
         <aside
             {...otherProps}
-            className="z-40 w-64 h-full bg-bg-secondary border-r"
+            className="z-40 w-64 p-2 h-full bg-bg-secondary border-r"
             aria-label="Sidebar"
         >
             {children}
