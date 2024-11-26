@@ -6,12 +6,12 @@ export interface IconButtonProps extends ButtonBaseProps {
 }
 
 export default (props: IconButtonProps) => {
-    const { children, variant, ...otherProps } = props;
+    const { children, variant, className, ...otherProps } = props;
     return (
         <ButtonBase
-            {...otherProps}
             variant={variant ?? "text"}
-            className={clsx("p-1 h-fit w-fit")}
+            className={clsx("p-1 h-fit w-fit", className)}
+            {...otherProps}
         >
             {children}
         </ButtonBase>

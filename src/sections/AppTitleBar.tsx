@@ -24,7 +24,7 @@ const WindowControls = () => {
 
 export default () => {
     return (
-        <div className='h-14 pl-4 pr-4 flex wa-drag'>
+        <div className='h-14 pl-4 pr-4 flex'>
             <GlobalPlayerControls />
             <WindowControls />
         </div>

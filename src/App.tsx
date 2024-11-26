@@ -1,14 +1,12 @@
 import AppTitleBar from './sections/AppTitleBar'
-import Button from './components/base/Button'
-import IconButton from './components/base/IconButton'
-import XMarkIcon from '@heroicons/react/24/outline/XMarkIcon'
+import Drawer from './components/base/Drawer'
 
 function App() {
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full flex flex-col'>
       <AppTitleBar />
       <hr />
-      <IconButton><XMarkIcon className='size-5' /></IconButton>
+      <Drawer>Sidebar!</Drawer>
     </div>
   )
 }
