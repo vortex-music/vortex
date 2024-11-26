@@ -1,0 +1,15 @@
+%% Dark Mode Toggle Button
+----------------------------
+<div className="flex items-center pl-2">
+    <Switch checked={isDarkMode} onChange={handleThemeToggle} className={`bg-app_background border border-primary_border
+        flex items-center h-9 rounded-full w-16 p-1 cursor-pointer focus:outline-none`}>
+        {isDarkMode ? null : (
+        <img src={sunIcon} alt="Sun Icon" className="h-6 w-6" />
+        )}
+        <span className={`${isDarkMode ? "translate-x-0 bg-subSectionDarkBlue" : "translate-x-1 bg-scrollbarBlue" }
+            inline-block w-6 h-6 transform rounded-full transition-transform duration-300 `} />
+        {isDarkMode ? (
+        <img src={moonIcon} alt="Moon Icon" className="h-4 w-4 ml-3" />
+        ) : null}
+    </Switch>
+</div>

@@ -33,7 +33,9 @@ export default () => {
             <div className="wa-drag grow h-full"></div>
 
             { /* Current Track Information */}
-            <div className="text-primary_font">Current Playing Info</div>
+            <div className="h-full min-w-96 w-2/5 flex items-center bg-bg-secondary">
+                Current Playing Info
+            </div>
 
             {/* Right Draggable Area */}
             <div className="wa-drag grow h-full" />
