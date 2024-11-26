@@ -1,15 +1,15 @@
-import { Box, CssBaseline, ThemeProvider } from '@mui/material'
 import AppTitleBar from './sections/AppTitleBar'
-import DefaultTheme from './styles/DefaultTheme'
+import Button from './components/base/Button'
+import IconButton from './components/base/IconButton'
+import XMarkIcon from '@heroicons/react/24/outline/XMarkIcon'
 
 function App() {
   return (
-    <ThemeProvider theme={DefaultTheme}>
-      <CssBaseline />
-      <Box sx={{ height: '100%', width: '100%' }}>
-        <AppTitleBar />
-      </Box>
-    </ThemeProvider>
+    <div className='w-full h-full'>
+      <AppTitleBar />
+      <hr />
+      <IconButton><XMarkIcon className='size-5' /></IconButton>
+    </div>
   )
 }
 

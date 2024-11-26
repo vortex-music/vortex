@@ -24,6 +24,12 @@ function createWindow() {
     /* App Icon, Title Bar */
     titleBarStyle: "hidden",
     icon: path.join(process.env.VITE_PUBLIC, "electron-vite.svg"),
+    /* Default Width and Height */
+    width: 1100,
+    height: 700,
+    /* Minimum Width and Height */
+    minWidth: 700,
+    minHeight: 450,
     webPreferences: {
       preload: path.join(__dirname, "preload.mjs")
     }

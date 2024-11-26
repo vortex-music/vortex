@@ -26,4 +26,9 @@ export default defineConfig({
         : {},
     }),
   ],
+  css: {
+    preprocessorOptions: {
+      postcss: {}, // Ensures PostCSS runs for Tailwind
+    },
+  },
 })
