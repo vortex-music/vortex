@@ -37,9 +37,9 @@ export default () => {
             { /* Current Track Information */}
             <div className="rounded h-4/5 pl-1 pr-1 border h-full min-w-96 w-2/5 flex items-center bg-bg-secondary">
                 <img className="rounded h-5/6" src={AlbumDefault} />
-                <div className="w-full flex flex-col items-center justify-center">
+                <div className="w-full flex flex-col items-center justify-center text-text-secondary hover:text-primary-dark">
                     <Typography className="text-sm font-semibold">Kaavaalaa (Jailer)</Typography>
-                    <Typography className="text-sm text-text-secondary">Anirudh Ravichander, Arunraja Kamaraj, and Shilpa Rao</Typography>
+                    <Typography className="text-sm text-inherit">Anirudh Ravichander, Arunraja Kamaraj, and Shilpa Rao</Typography>
                 </div>
             </div>
 
