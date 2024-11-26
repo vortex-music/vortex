@@ -13,9 +13,9 @@ export default (props: ButtonBaseProps) => {
         <button
             {...otherProps}
             className={clsx(
-                "bg-white",
-                "hover:bg-gray-100",
-                "active:bg-gray-200",
+                "bg-primaryButton_background",
+                "hover:bg-primaryHover_background",
+                "active:bg-primaryActive_background",
                 "text-gray-800",
                 "font-semibold",
                 "rounded",
