@@ -27,10 +27,10 @@ function createWindow() {
     /* Traffic Lights Position (macOS) */
     ...process.platform !== "darwin" ? {} : { trafficLightPosition: { x: 18, y: 18 } },
     /* Default Width and Height */
-    width: 1100,
+    width: 1300,
     height: 700,
     /* Minimum Width and Height */
-    minWidth: 700,
+    minWidth: 1150,
     minHeight: 450,
     webPreferences: {
       preload: path.join(__dirname, "preload.mjs")
