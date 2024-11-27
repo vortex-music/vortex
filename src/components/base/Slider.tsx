@@ -1,7 +1,9 @@
 import clsx from "clsx";
+import '../../styles/slider.css'
+import { DetailedHTMLProps, InputHTMLAttributes } from "react";
 
-export interface SliderProps extends React.HTMLAttributes<HTMLInputElement> {
-
+export interface SliderProps extends DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> {
+    
 }
 
 export default (props: SliderProps) => {
@@ -12,7 +14,12 @@ export default (props: SliderProps) => {
             {...otherProps}
             type="range"
             className={
-                clsx(className)
+                clsx(
+                    "slider-nothumb",
+                    "hover:cursor-pointer",
+                    "h-1.5 bg-action-active rounded-lg overflow-hidden appearance-none",
+                    className
+                )
             }
         />
     )

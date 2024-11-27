@@ -1,0 +1,10 @@
+/* Needs Tailwind Styles to be Imported */
+.slider-nothumb::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border-radius: 50%;
+    box-shadow: -210px 0 0 210px var(--text-primary);
+    cursor: pointer;
+    height: 20px;
+    width: 0px;
+    border: 0;
+}
