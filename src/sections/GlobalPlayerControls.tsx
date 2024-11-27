@@ -35,7 +35,7 @@ export default () => {
             <div className="wa-drag grow h-full"></div>
 
             { /* Current Track Information */}
-            <div className="rounded h-4/5 pl-1 pr-1 border h-full min-w-96 w-2/5 flex items-center bg-bg-secondary">
+            <div className="rounded h-4/5 pl-1 pr-1 border min-w-96 w-2/5 flex items-center bg-bg-secondary">
                 <img className="rounded h-5/6" src={AlbumDefault} />
                 <div className="w-full flex flex-col items-center justify-center text-text-secondary transition-colors hover:text-primary-dark">
                     <Typography className="text-sm font-semibold">Kaavaalaa (Jailer)</Typography>
