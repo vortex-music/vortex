@@ -30,6 +30,7 @@ let win: BrowserWindow | null
 ipcMain.handle('close-window', () => { win?.close() })
 ipcMain.handle('minimize-window', () => { win?.minimize() })
 ipcMain.handle('restore-window', () => { win?.isMaximized() ? win.restore() : win?.maximize() });
+ipcMain.handle('get-rootapp-path', () => app.getAppPath())
 
 function createWindow() {
   win = new BrowserWindow({

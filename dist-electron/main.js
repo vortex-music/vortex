@@ -19,6 +19,7 @@ ipcMain.handle("minimize-window", () => {
 ipcMain.handle("restore-window", () => {
   (win == null ? void 0 : win.isMaximized()) ? win.restore() : win == null ? void 0 : win.maximize();
 });
+ipcMain.handle("get-rootapp-path", () => app.getAppPath());
 function createWindow() {
   win = new BrowserWindow({
     /* App Icon, Title Bar */
