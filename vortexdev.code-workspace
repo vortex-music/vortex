@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../plugin-base"
+		},
+		{
+			"path": "../types"
+		}
+	],
+	"settings": {}
+}

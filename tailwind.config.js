@@ -6,12 +6,13 @@ export default {
     "./src/**/*.{ts,tsx}",
     "./index.html",
   ],
-  darkMode: 'class', // or 'class'
+  darkMode: 'media', // or 'class'
   theme: {
     extend: {
       fontFamily: {
         sans: ['Inter'],
       },
+
       colors: () => {
         /* Define Theme Colors to Map */
         let colors = [
@@ -34,7 +35,11 @@ export default {
           /* Background Colors */
           "bg-default",
           "bg-secondary",
-          "bg-paper"
+          "bg-paper",
+
+          /* Other Misc. Colors */
+          "border-default",
+          "divider-default"
         ]
 
         /* Map to CSS Variables */
@@ -42,7 +47,12 @@ export default {
           acc[v] = `var(--${v})`;
           return acc;
         }, {})
-      }
+      },
+
+      /* Default Border Colors */
+      borderColor: {
+        DEFAULT: 'var(--border-default)',
+      },
     },
     accentColor: ({ theme }) => ({
       ...theme('colors'),

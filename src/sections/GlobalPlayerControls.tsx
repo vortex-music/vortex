@@ -13,9 +13,9 @@ export default () => {
     const [isPlaying, _setIsPlaying] = React.useState(false);
 
     return (
-        <div className="h-full w-full flex items-center bg-app_background">
+        <div className="h-full w-full flex items-center bg-bg-primary">
             {/* Left Side Controls */}
-            <div className="flex items-center gap-x-1 bg-app_background">
+            <div className="flex items-center gap-x-1 bg-bg-primary">
                 {/* This could be ToggleButton in Future! */}
                 <IconButton><ArrowsRightLeftIcon className="size-5" /></IconButton>
                 <IconButton><BackwardIcon className="size-5" /></IconButton>
@@ -47,8 +47,8 @@ export default () => {
             <div className="wa-drag grow h-full" />
 
             {/* Right Side Controls */}
-            <div className="flex items-center gap-x-1">
-                <SpeakerWaveIcon className="size-5" />
+            <div className="flex items-center gap-x-1 text-text-primary">
+                <SpeakerWaveIcon className="size-4 mr-1" />
                 <Slider min="0" max="100" className="w-20" />
                 <IconButton className="ml-4"><ArrowUpOnSquareIcon className="size-5" /></IconButton>
                 <IconButton><ChatBubbleBottomCenterTextIcon className="size-5" /></IconButton>

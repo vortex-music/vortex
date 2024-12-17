@@ -23,7 +23,7 @@ ipcMain.handle("get-rootapp-path", () => app.getAppPath());
 function createWindow() {
   win = new BrowserWindow({
     /* App Icon, Title Bar */
-    titleBarStyle: "hidden",
+    titleBarStyle: process.platform !== "linux" ? "hidden" : "default",
     icon: path.join(process.env.VITE_PUBLIC, "electron-vite.svg"),
     /* Traffic Lights Position (macOS) */
     ...process.platform !== "darwin" ? {} : { trafficLightPosition: { x: 18, y: 18 } },
@@ -37,6 +37,8 @@ function createWindow() {
       preload: path.join(__dirname, "preload.mjs")
     }
   });
+  win.removeMenu();
+  win.webContents.openDevTools({ mode: "detach" });
   win.webContents.on("did-finish-load", () => {
     win == null ? void 0 : win.webContents.send("main-process-message", (/* @__PURE__ */ new Date()).toLocaleString());
   });

@@ -5,6 +5,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
 import Typography from './components/base/Typography'
 import React from 'react'
 import Button from './components/base/Button'
+import { IPlugin } from '@vortex-music/types/BasePlugin'
 
 function App() {
   const [pluginText, setPluginText] = React.useState("");
@@ -12,16 +13,16 @@ function App() {
   /* Test Base Plugin */
   const loadUserPlugin = async () => {
     const rootPluginPath = `${await window.vortexAPI.getAppPath()}/plugins`;
-    const plugin: any = (await import(/* @vite-ignore */ `${rootPluginPath}/${pluginText}`)).default;
+    const plugin: IPlugin = (await import(/* @vite-ignore */ `${rootPluginPath}/${pluginText}`)).default;
     console.log("Plugin Imported!")
     
     /* Initialize Plugin */
-    plugin.initialize();
-    plugin.play();
+    await plugin.activate();
+    await plugin.player.play();
   }
 
   return (
-    <div className='w-full h-full flex flex-col bg-app_background'>
+    <div className='w-full h-full flex flex-col bg-bg-default'>
       <AppTitleBar /><hr />
       <div className='flex w-full h-full'>
         {/* Side Bar */}

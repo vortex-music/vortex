@@ -20,7 +20,7 @@ export default (props: TextFieldProps) => {
                         {
                             className: clsx(
                                 startAdornment.props.className,
-                                "size-4 absolute top-1.5 left-1.5"
+                                "size-4 absolute top-1.5 left-1.5 text-text-primary"
                             )
                         }
                     )
@@ -33,6 +33,7 @@ export default (props: TextFieldProps) => {
                     /* Common Props */
                     "rounded h-7",
                     "focus:outline-none focus:ring-0",
+                    "text-text-primary",
                     
                     /* Left & Right Adornments */
                     {

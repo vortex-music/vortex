@@ -35,7 +35,7 @@ ipcMain.handle('get-rootapp-path', () => app.getAppPath())
 function createWindow() {
   win = new BrowserWindow({
     /* App Icon, Title Bar */
-    titleBarStyle: 'hidden',
+    titleBarStyle: (process.platform !== "linux") ? 'hidden' : 'default',
     icon: path.join(process.env.VITE_PUBLIC, 'electron-vite.svg'),
     
     /* Traffic Lights Position (macOS) */
@@ -53,6 +53,10 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.mjs'),
     },
   })
+
+  /* Remove the Menu Bar */
+  win.removeMenu();
+  win.webContents.openDevTools({ mode: 'detach' });
 
   // Test active push message to Renderer-process.
   win.webContents.on('did-finish-load', () => {

@@ -1,5 +1,5 @@
 /* Default Light Theme */
-.theme_light {
+:root {
     /* Primary Colors */
     --primary-light: #42a5f5;
     --primary-main: #1976d2;
@@ -27,6 +27,31 @@
 }
 
 /* Add Dark Mode Implementation */
-.theme_dark {
-    --tofix: 0;
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Primary Colors */
+        --primary-light: #42a5f5;
+        --primary-main: #1976d2;
+        --primary-dark: #1565c0;
+    
+        /* Text Colors */
+        --text-primary: #fff;
+        --text-secondary: rgba(255, 255, 255, 0.7);
+        --text-disabled: rgba(255, 255, 255, 0.5);
+    
+        /* Action Colors */
+        --action-active: rgba(255, 255, 255, 0.11);
+        --action-hover: rgba(255, 255, 255, 0.08);
+        --action-selected: rgba(255, 255, 255, 0.16);
+        --action-disabled: rgba(255, 255, 255, 0.3);
+    
+        /* Background Colors */
+        --bg-default: #121212;
+        --bg-secondary: rgba(255, 255, 255, 0.01);
+        --bg-paper: #121212;
+    
+        /* Border and Divider Colors */
+        --border-default: rgba(255, 255, 255, 0.12);
+        --divider-default: rgba(255, 255, 255, 0.12);
+    }
 }

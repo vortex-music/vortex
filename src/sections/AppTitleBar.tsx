@@ -30,32 +30,18 @@ const WindowControls = () => {
 };
 
 export default () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    useEffect(() => {
-        if (isDarkMode) {
-            document.body.classList.remove("theme_light");
-            document.body.classList.add("theme_dark");
-        } else {
-            document.body.classList.add("theme_light");
-            document.body.classList.remove("theme_dark");
-        }
-    }, [isDarkMode]);
-
-    const handleThemeToggle = () => {
-        setIsDarkMode((prev) => !prev);
-    };
-
     return (
         <div
             className={clsx("h-14 pl-4 pr-4 flex items-center", {
+                /* macOS Traffic Lights Left Padding */
                 "ml-20": window.vortexAPI.platform === "darwin",
             })}
         >
+            { /* Global Player Controls */ }
             <GlobalPlayerControls />
-            <IconButton><CogIcon className="size-5" /></IconButton>
+            <IconButton className="ml-1"><CogIcon className="size-5" /></IconButton>
 
-            { /* Window Controls (Windows / Linux) */ }
+            { /* Window Controls (Windows / Linux) */}
             <WindowControls />
         </div>
     );
